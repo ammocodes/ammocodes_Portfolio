@@ -1,3 +1,11 @@
+:root {
+  --main-color: #2E0249;
+  --secondary-color: #570A57;
+  --third-color: #A91079;
+  --fourth-color: #F806CC;
+  
+}
+
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -11,18 +19,22 @@ body {
   line-height: 1.5;
 }
 
-.header {
+/* .header {
   background-color: grey;
-}
+} */
 
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  background-color: grey;
+  background-color: var(--main-color);
 }
 
 .nav-items {
   display: flex;
+}
+
+.hero-banner {
+  background-color: var(--secondary-color);
 }
 
 .title {
@@ -37,12 +49,21 @@ body {
   height: 50px;
 }
 
+.page-section {
+  display: flex;
+}
+
 ul {
   list-style: none;
   width: 100%;
   display: flex;
   gap: 10px;
   padding: 10px;
+}
+
+.page-section h2 {
+  /* flex-basis: 20%; */
+  /* margin: auto; */
 }
 
 h1,
@@ -82,17 +103,20 @@ p {
 .flex {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 /* cards */
 .flex-item {
   display: flex;
   align-items: flex-end;
-  flex-basis: calc(50% - 1);
-  margin: 0.5em;
+  flex-basis: 49%;
+  /* margin: 0.5em; */
   min-height: 150px;
+  margin: 0.5rem 0;
+  
 }
 
 .flex-item:first-child {
@@ -116,3 +140,5 @@ p {
   }
   
 }
+
+/* small desktop 980px, tablet 768px; 480px, usually put 3 sizes on media query. */
