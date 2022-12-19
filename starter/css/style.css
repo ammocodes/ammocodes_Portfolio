@@ -3,13 +3,7 @@
   --secondary-color: #570A57;
   --third-color: #A91079;
   --fourth-color: #F806CC;
-  
-}
 
-* {
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 1px solid red;
 }
 
 body {
@@ -17,118 +11,237 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  height: 100%;
 }
 
-.nav-bar {
+/* Header & Navbar */
+
+.header {
   display: flex;
   justify-content: space-between;
   background-color: var(--main-color);
+  padding: 20px;
 }
 
-.nav-items {
-  display: flex;
+header {
+  background-color: var(--main-color);
 }
 
-.hero-banner {
-  background-color: var(--secondary-color);
-  height: 50px;
+.profile-pic {
+  border-radius: 50%;
+  height: 100px;
+  margin-right: 20px;
 }
 
-.title {
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
 }
 
-.page-section {
-  display: flex;
-  justify-content: flex-start;
-  align-items; 
+.logo h1 {
+  color: var(--third-color);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 ul {
   list-style: none;
-  width: 100%;
+  width: 98%;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   padding: 10px;
+  justify-content: center;
+  font-size: 28px;
+
+  margin: 0;
+  height: 50px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+li a {
+  color: white;
+  text-decoration: none;
+  padding: 0;
   margin: 0;
 }
 
-p {
-  margin: 0;
-}
 
-.proj1 {
-  background-image: url(../images/02-portfolio-1.jpg);
-  background-repeat: no-repeat;
-}
+/* banner styling */
 
-.proj2 {
-  background-image: url(../images/02-portfolio-2.jpg);
-}
-
-.proj3 {
-  background-image: url(../images/02-portfolio-3.jpg);
-}
-
-.proj4 {
-  background-image: url(../images/02-portfolio-4.jpg);
-}
-
-.proj5 {
-  background-image: url(../images/02-run-buddy.jpg);
-}
-
-/* parent flex container */
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.hero-banner {
+  background-color: var(--secondary-color);
+  height: 90vh;
+  background-image: url(/images/nate-grant-QQ9LainS6tI-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-message {
+  color: var(--fourth-color);
+  position: absolute;
+  bottom: 200px;
+  font-size: 46px;
 }
 
 
-/* cards */
 .flex-item {
   display: flex;
   align-items: flex-end;
   flex-basis: 49%;
-  min-height: 150px;
-  margin: 0.5rem 0;
-  
-}
-
-.flex-item:first-child {
   min-height: 300px;
-  /* added the size of the first card */
-  flex-basis: 100%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  margin: 1px;
 }
 
-.flex-item div {
-  background-color: lightgreen;
+.flex-tab {
   padding: 10px;
 }
 
-/* When the screen is less than 768px, cards go to 100% width */
-@media screen and (max-width: 768px) {
-  .flex-item {
-    flex-basis: 100%;
-  }
-  .flex-item:first-child {
-    min-height: 150px;
-  }
-  
+.flex-item:first-child {
+  min-height: 400px;
+  flex-basis: 100%;
 }
 
-/* small desktop 980px, tablet 768px; 480px, usually put 3 sizes on media query. */
+.work-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width:960px) {
+  .page-section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    margin: 50px 0;
+  }
+
+  .page-section h2 {
+    border-right: 2px dashed var(--secondary-color);
+    text-align: center;
+    padding-right: 40px;
+    font-size: 50px;
+    color: var(--third-color);
+  }
+
+  .page-section article {
+    padding: 0 50px;
+  }
+
+  .portfolio-container {
+    margin: 0 40px; 
+    height: 100%;
+  }
+
+  .flex-tab {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .proj1 {
+    background-image: url(../images/02-portfolio-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .proj2 {
+    background-image: url(../images/02-portfolio-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .proj3 {
+    background-image: url(../images/02-portfolio-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .proj4 {
+    background-image: url(../images/02-portfolio-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .proj5 {
+    background-image: url(../images/02-run-buddy.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  /* When the screen is less than 768px, cards go to 100% width */
+  /* @media screen and (max-width: 768px) {
+    .flex-item:first-child {
+      min-height: 150px;
+    }
+    .flex-item {
+      flex-basis: 100%;
+    }
+  } */
+
+  /* small desktop 980px, tablet 768px; 480px, usually put 3 sizes on media query. */
+
+  /* footer */
+  .footer {
+    display: flex;
+    background-color: var(--main-color);
+    justify-content: center;
+  }
+
+  .footer li {
+    color: white;
+  }
+
+
+  @media screen and (max-width:990px) {
+    header {
+        flex-direction: column;
+    }
+
+    header li {
+        margin: 0 10px;
+    }
+    .banner-message {
+        text-align: center;
+    }
+    .info {
+        flex-basis: 100%;
+        margin: 20px 20px;
+        ;
+    }
+    .page-section {
+        padding: 20px;
+    }
+
+    .page-section h2 {
+        text-align: center;
+        border-bottom: 1px solid black;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    .contact {
+        display: none;
+    }
+}
