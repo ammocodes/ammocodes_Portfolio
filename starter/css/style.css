@@ -6,6 +6,16 @@
 
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  }
+  /* make all anchor tags turn purple on hover */
+
+  a:hover {
+  color: var(--fourth-color);
+  }
+
 body {
   margin: 0;
   padding: 0;
@@ -101,10 +111,7 @@ li a {
   padding: 10px;
 }
 
-.flex-item:first-child {
-  min-height: 400px;
-  flex-basis: 100%;
-}
+
 
 .work-container {
   display: flex;
@@ -120,10 +127,10 @@ li a {
   }
 
   .page-section h2 {
-    border-right: 2px dashed var(--secondary-color);
+    border-right: 2px double var(--secondary-color);
     text-align: center;
-    padding-right: 40px;
-    font-size: 50px;
+    padding-right: 32px;
+    font-size: 60px;
     color: var(--third-color);
   }
 
@@ -134,6 +141,12 @@ li a {
   .portfolio-container {
     margin: 0 40px; 
     height: 100%;
+  }
+
+  .row-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .flex-tab {
@@ -161,6 +174,7 @@ li a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    width: 100%;
   }
 
   .proj2 {
@@ -168,6 +182,7 @@ li a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    width: 50%;
   }
 
   .proj3 {
@@ -175,6 +190,8 @@ li a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    width: 50%;
+
   }
 
   .proj4 {
@@ -182,26 +199,17 @@ li a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    width: 50%;
+
   }
 
   .proj5 {
-    background-image: url(../images/02-run-buddy.jpg);
+    background-image: url(../images/meeting-ge46d34e5c_1920.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    width: 50%;
   }
 
-
-  /* When the screen is less than 768px, cards go to 100% width */
-  /* @media screen and (max-width: 768px) {
-    .flex-item:first-child {
-      min-height: 150px;
-    }
-    .flex-item {
-      flex-basis: 100%;
-    }
-  } */
-
-  /* small desktop 980px, tablet 768px; 480px, usually put 3 sizes on media query. */
 
   /* footer */
   .footer {
@@ -214,7 +222,7 @@ li a {
     color: white;
   }
 
-
+/* media, buggy, still having issues and refactor */
   @media screen and (max-width:990px) {
     header {
         flex-direction: column;
@@ -229,7 +237,6 @@ li a {
     .info {
         flex-basis: 100%;
         margin: 20px 20px;
-        ;
     }
     .page-section {
         padding: 20px;
